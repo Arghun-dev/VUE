@@ -101,4 +101,26 @@ other events:
 
 ```js
 <div :style='{ backgroundColor: 'red' }'>backgroundColor</div>
+<div :style='{ backgroundColor: variant.variantColor }'>backgroundColor</div>
+```
+
+### disableAttribute
+
+to make a button `disabled` according to a specific condition
+
+```js
+var app = new Vue({
+    el: '#app',
+    data: {
+        inStock: true,
+        cart: 0
+    },
+    methods: {
+        addToCart() {
+            this.cart += 1
+        }
+    }
+})
+
+<button v-on:click='addToCart' :disabled='!inStock'>addToCart</button>
 ```

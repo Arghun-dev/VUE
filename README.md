@@ -180,3 +180,55 @@ data: {
     activeClass: 'active'
 }
 ```
+
+### computed Properties
+
+```js
+var app = new Vue({
+    el: '#app',
+    data: {
+        brand: 'Vue Mastery',
+        product: 'Socks'
+    },
+    computed: {
+        title() {
+            return this.brand + '' + this.product
+        }
+    }
+})
+
+<h1>{{ title }}</h1>
+```
+
+### components
+
+```js
+Vue.component('product', {
+    template: `
+        <div>
+            <h1>heading</h1>
+            <h3>subHeading</h3>
+        </div>
+    `,
+    data() {
+        return {
+            // returns a fresh data object for each component
+        }
+    }
+})
+```
+
+what if our component is nested inside another compoentn.
+`how a component has access to the outside data?`
+
+We use **props** just like **React**
+
+```js
+Vue.component('product', {
+    props: [message],
+    template: `<div>{{ message }}</div>`,
+    data: {...}
+})
+
+<product message="hello"></product>
+```

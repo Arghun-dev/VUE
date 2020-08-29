@@ -95,3 +95,10 @@ var app = new Vue({
 other events:
 
 `@submit`, `@keyup.enter`  .enter is `modifier`
+
+
+### inlineStyling
+
+```js
+<div :style='{ backgroundColor: 'red' }'>backgroundColor</div>
+```

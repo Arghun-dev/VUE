@@ -13,6 +13,7 @@
 
 ### List Rendering
 
+1.
 ```js
 <ul>
     <li v-for="detail in details">{{ detail }}</li>
@@ -24,6 +25,32 @@ javascript:
 var app = new Vue({
     data: {
         details: ['first', 'second', 'third']
+    }
+})
+```
+
+2.
+```js
+<ul>
+    <li v-for="variant in variants" :key="variant.variantId">
+        {{ variant.variantColor }}
+    </li>
+</ul>
+
+javascript:
+
+var app = new Vue({
+    data: {
+        variants: [
+            {
+                variantColor: 'red',
+                variantId: 123
+            },
+            {
+                variantColor: 'blue',
+                variantId: 456
+            }
+        ]
     }
 })
 ```

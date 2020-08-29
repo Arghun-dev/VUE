@@ -83,9 +83,15 @@ var app = new Vue({
         cart: 0
     },
     methods: {
-        addToCart: function() {
+        addToCart() {
             this.cart += 1
         }
     }
 })
 ```
+
+* `hover` is equal to `@mouseover`
+
+other events:
+
+`@submit`, `@keyup.enter`  .enter is `modifier`

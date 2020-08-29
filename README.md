@@ -10,3 +10,20 @@
     <p v-else>out of stock</p>
 </div>
 ```
+
+### List Rendering
+
+```js
+<ul>
+    <li v-for="detail in details">{{ detail }}</li>
+</ul>
+
+
+javascript:
+
+var app = new Vue({
+    data: {
+        details: ['first', 'second', 'third']
+    }
+})
+```

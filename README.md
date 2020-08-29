@@ -124,3 +124,59 @@ var app = new Vue({
 
 <button v-on:click='addToCart' :disabled='!inStock'>addToCart</button>
 ```
+
+### class Bindings
+
+1.
+```js
+<div :class="{ active: activeClass, 'text-danger': errorClass }"></div>
+
+data: {
+    activeClass: true,
+    errorClass: false
+}
+
+So 
+
+<div class="active"></div>
+```
+
+2. Objects
+```js
+<div :class="classObject"></div>
+
+data: {
+    classObject: {
+        active: true,
+        'text-danger': false
+    }
+}
+
+So
+
+<div class="active"></div>
+```
+
+3. Array
+```js
+<div :class="[activeClass, errorClass]"></div>
+
+data: {
+    activeClass: 'active',
+    errorClass: 'text-danger'
+}
+
+So
+
+<div class='active text-danger'></div>
+```
+
+4. Conditionals
+```js
+<div :class="[isActive ? activeClass : '']"></div>
+
+data: {
+    isActive: true,
+    activeClass: 'active'
+}
+```

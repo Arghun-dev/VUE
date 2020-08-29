@@ -54,3 +54,19 @@ var app = new Vue({
     }
 })
 ```
+
+### Event Handling
+
+```js
+<h3>{{ cart }}</h3>
+<button v-on:click='cart += 1'>addCart</button>
+
+javscript: 
+
+var app = new Vue({
+    el: '#app',
+    data: {
+        cart: 0
+    }
+})
+```

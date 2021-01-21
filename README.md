@@ -1,5 +1,22 @@
 # VUE
 
+### v-bind
+
+Dynamically binds an attribute to an expression
+
+```js
+v-bind:src='expression'
+```
+
+Examples
+
+:alt='description'
+:href='url'
+:title='toolTip'
+:class='isActive'
+:style='isStyled'
+:disabled='isDisabled'
+
 ### Conditional Rendering
 
 ```js

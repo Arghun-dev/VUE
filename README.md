@@ -249,3 +249,17 @@ Vue.component('product', {
 
 <product message="hello"></product>
 ```
+
+
+
+# Vuex
+
+state management in Vue.
+
+vuex terms:
+
+**State:** App level state/data (todos, posts, token, etc)
+**Getters:** Get pieces of state or computed values from state
+**Actions:** Called from components to commit a mutation
+**Mutation:** Mutate the state (update data, etc)
+**Modules:** each module can have it's own state, gettes, actions & mutations (posts module, auth module, etc)
